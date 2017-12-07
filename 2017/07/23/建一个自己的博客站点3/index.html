@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="hexo,腾讯云," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="通过前面的内容我们已经安装了Hexo并且对它的配置文件进行了一定了解，下面就说说如何把自己的静态博客发布到 github pages github pages  github pages 在我理解他是一个用来托管静态网页的容器,好方便人们的访问.  首先我们先创建一个repository 注意这个repository的名字的格式一定要是yourname.github.io yourname就是你的">
+<meta name="keywords" content="hexo,腾讯云">
+<meta property="og:type" content="article">
+<meta property="og:title" content="建一个自己的博客站点(3)">
+<meta property="og:url" content="http://www.flyfood.name/2017/07/23/建一个自己的博客站点3/index.html">
+<meta property="og:site_name" content="飞翔的美食号">
+<meta property="og:description" content="通过前面的内容我们已经安装了Hexo并且对它的配置文件进行了一定了解，下面就说说如何把自己的静态博客发布到 github pages github pages  github pages 在我理解他是一个用来托管静态网页的容器,好方便人们的访问.  首先我们先创建一个repository 注意这个repository的名字的格式一定要是yourname.github.io yourname就是你的">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://otfz27j99.bkt.clouddn.com//blog/image/%E7%81%AB%E7%8B%90%E6%88%AA%E5%9B%BE_2017-07-23T07-49-54.882Z.png">
+<meta property="og:image" content="http://otfz27j99.bkt.clouddn.com//blog/image/%E7%81%AB%E7%8B%90%E6%88%AA%E5%9B%BE_2017-07-23T07-51-10.200Z.png">
+<meta property="og:image" content="http://otfz27j99.bkt.clouddn.com//blog/image/%E7%81%AB%E7%8B%90%E6%88%AA%E5%9B%BE_2017-07-23T08-09-03.290Z.png">
+<meta property="og:image" content="http://otfz27j99.bkt.clouddn.com//blog/image/%E7%81%AB%E7%8B%90%E6%88%AA%E5%9B%BE_2017-07-23T08-10-22.806Z.png">
+<meta property="og:updated_time" content="2017-12-07T08:38:28.448Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="建一个自己的博客站点(3)">
+<meta name="twitter:description" content="通过前面的内容我们已经安装了Hexo并且对它的配置文件进行了一定了解，下面就说说如何把自己的静态博客发布到 github pages github pages  github pages 在我理解他是一个用来托管静态网页的容器,好方便人们的访问.  首先我们先创建一个repository 注意这个repository的名字的格式一定要是yourname.github.io yourname就是你的">
+<meta name="twitter:image" content="http://otfz27j99.bkt.clouddn.com//blog/image/%E7%81%AB%E7%8B%90%E6%88%AA%E5%9B%BE_2017-07-23T07-49-54.882Z.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.flyfood.name/2017/07/23/建一个自己的博客站点3/"/>
+
+
+
+
+
+  <title>建一个自己的博客站点(3) | 飞翔的美食号</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">飞翔的美食号</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">The more effort ,the more lucky</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.flyfood.name/2017/07/23/建一个自己的博客站点3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="听孔子的话">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://otfz27j99.bkt.clouddn.com/bolg/imageQQ%E5%9B%BE%E7%89%8720170829174414.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="飞翔的美食号">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">建一个自己的博客站点(3)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-23T11:04:25+08:00">
+                2017-07-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Hexo教程/" itemprop="url" rel="index">
+                    <span itemprop="name">Hexo教程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2017/07/23/建一个自己的博客站点3/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2017/07/23/建一个自己的博客站点3/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>通过前面的内容我们已经安装了Hexo并且对它的配置文件进行了一定了解，下面就说说如何把自己的静态博客发布到 <a href="https://pages.github.com/" target="_blank" rel="noopener">github pages</a></p>
+<h1 id="github-pages"><a href="#github-pages" class="headerlink" title="github pages"></a>github pages</h1><p>  github pages 在我理解他是一个用来托管静态网页的容器,好方便人们的访问.<br>  首先我们先创建一个repository <strong>注意这个repository的名字的格式</strong>一定要是<strong>yourname.github.io</strong><br> <strong>yourname</strong>就是你的github的用户名，比如说我的是<strong>Tom12345678q.github.io</strong><br><a id="more"></a></p>
+<h1 id="修改网站配置文件"><a href="#修改网站配置文件" class="headerlink" title="修改网站配置文件"></a>修改网站配置文件</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">参数</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">type</td>
+<td style="text-align:center">服务类型</td>
+</tr>
+<tr>
+<td style="text-align:center">repo</td>
+<td style="text-align:center">资源库的地址</td>
+</tr>
+<tr>
+<td style="text-align:center">branch</td>
+<td style="text-align:center">分支</td>
+</tr>
+<tr>
+<td style="text-align:center">message</td>
+<td style="text-align:center">部署时的描述信息</td>
+</tr>
+</tbody>
+</table>
+<p>下面是我的</p>
+<blockquote>
+<p>写的时候一定要仔细 一个空格都不能错 比如’:’前一定要有个空格<br>deploy:<br>type: git<br>repo: git@github.com:Tom12345678q/Tom12345678q.github.io.git<br>branch: master</p>
+</blockquote>
+<p>  上面这些东西只要是以前用过git的,理解起来应该so easy</p>
+<p>  现在还需要安装一个小插件<strong>hexo-deployer-git</strong><br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
+<h1 id="hexo常用命令"><a href="#hexo常用命令" class="headerlink" title="hexo常用命令"></a>hexo常用命令</h1><table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">hexo new postName</td>
+<td style="text-align:left">#新建文章 在source/_posts 下生成</td>
+</tr>
+<tr>
+<td style="text-align:left">hexo new page pageName</td>
+<td style="text-align:left">#新建页面 在source/pageName 下生成</td>
+</tr>
+<tr>
+<td style="text-align:left">hexo deploy</td>
+<td style="text-align:left">#将.deploy目录部署到GitHub 简写指令：hexo d</td>
+</tr>
+<tr>
+<td style="text-align:left">hexo generate</td>
+<td style="text-align:left">#生成静态页面至public目录 简写指令：hexo g</td>
+</tr>
+<tr>
+<td style="text-align:left">hexo server</td>
+<td style="text-align:left">#开启预览访问端口（默认端口4000，’ctrl + c’关闭server）简写指令hexo s</td>
+</tr>
+<tr>
+<td style="text-align:left">hexo clean</td>
+<td style="text-align:left">#清除所有静态页面和缓存数据</td>
+</tr>
+</tbody>
+</table>
+<p>下面我们依次执行下面这几个命令, 这些命令都要在你初始化的<folder> 这个文件夹下执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo new postName </span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure></folder></p>
+<p>会出现 下面这两行</p>
+<blockquote>
+<p>INFO  Start processing<br>INFO  Hexo is running at <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a>. Press Ctrl+C to stop.<br>然后你就可以访问它–<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> ,就可以看到你的博客了<br>如果4000端口被占用那么就指定一个端口  , 执行下面的命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">   hexo server -p ....</span><br><span class="line">如 hexo server -p 8888</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>如果没有报任何错的话那么此时你的静态网页已经部署到github上了，你可以通过<strong>yourname.github.io</strong>访问。如<a href="http://flyfood.name" target="_blank" rel="noopener">Tom12345678q.github.io</a>,当然你们会发现我的地址不是<strong>Tom12345678q.github.io</strong>,而是flyfood.name那是因为我把我的<strong>域名</strong>绑定到了<em>Tom12345678q.github.io</em>，至于如何绑定下面我会讲。</p>
+<h1 id="绑定自己的域名"><a href="#绑定自己的域名" class="headerlink" title="绑定自己的域名"></a>绑定自己的域名</h1><h2 id="这个首先你得有个域名不会的自己百度一下很简单，我是在腾讯云上买的域名，买完域名后进入域名服务-gt-域名管理"><a href="#这个首先你得有个域名不会的自己百度一下很简单，我是在腾讯云上买的域名，买完域名后进入域名服务-gt-域名管理" class="headerlink" title="这个首先你得有个域名不会的自己百度一下很简单，我是在腾讯云上买的域名，买完域名后进入域名服务-&gt;域名管理"></a>这个首先你得有个域名不会的自己百度一下很简单，我是在腾讯云上买的域名，买完域名后进入<strong>域名服务-&gt;域名管理</strong></h2><p>然后会看见下面这个图，点击解析<br><img src="http://otfz27j99.bkt.clouddn.com//blog/image/%E7%81%AB%E7%8B%90%E6%88%AA%E5%9B%BE_2017-07-23T07-49-54.882Z.png"><br>出现了这个<br><img src="http://otfz27j99.bkt.clouddn.com//blog/image/%E7%81%AB%E7%8B%90%E6%88%AA%E5%9B%BE_2017-07-23T07-51-10.200Z.png"></p>
+<ul>
+<li>记录类型一定要为 CNAME 这种类型，只有这样你的域名才能指向你的github</li>
+<li>记录值填 <em>yourname.github.io</em><h2 id="然后我们再去github"><a href="#然后我们再去github" class="headerlink" title="然后我们再去github"></a>然后我们再去github</h2>进入settings<img src="http://otfz27j99.bkt.clouddn.com//blog/image/%E7%81%AB%E7%8B%90%E6%88%AA%E5%9B%BE_2017-07-23T08-09-03.290Z.png">
+在 Custom domain版块的文本框里写下你的域名然后保存，保存完后会出现一个<strong>CNAME</strong>文件，把这个文件放到你的博客站点的source文件夹下，防止你每次提交文件到github上后这个文件会被删除<img src="http://otfz27j99.bkt.clouddn.com//blog/image/%E7%81%AB%E7%8B%90%E6%88%AA%E5%9B%BE_2017-07-23T08-10-22.806Z.png">
+</li>
+</ul>
+<p>这个Hexo初级教程算是写完了，第一次写，写的很差劲很多东西还没写出来，有时间我还会接着写。对这个教程有什麽想说的可以通过<strong>15738003651@qq.com</strong>联系我</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
+          
+            <a href="/tags/腾讯云/" rel="tag"># 腾讯云</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/22/建一个自己的博客站点2/" rel="next" title="建一个自己的博客站点(2)">
+                <i class="fa fa-chevron-left"></i> 建一个自己的博客站点(2)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/25/shiro学习笔记-1/" rel="prev" title="shiro学习笔记[1]">
+                shiro学习笔记[1] <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="SOHUCS"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://otfz27j99.bkt.clouddn.com/bolg/imageQQ%E5%9B%BE%E7%89%8720170829174414.jpg"
+               alt="听孔子的话" />
+          <p class="site-author-name" itemprop="name">听孔子的话</p>
+           
+              <p class="site-description motion-element" itemprop="description">编程学习</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#github-pages"><span class="nav-number">1.</span> <span class="nav-text"><a href="#github-pages" class="headerlink" title="github pages"></a>github pages</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改网站配置文件"><span class="nav-number">2.</span> <span class="nav-text"><a href="#&#x4FEE;&#x6539;&#x7F51;&#x7AD9;&#x914D;&#x7F6E;&#x6587;&#x4EF6;" class="headerlink" title="&#x4FEE;&#x6539;&#x7F51;&#x7AD9;&#x914D;&#x7F6E;&#x6587;&#x4EF6;"></a>&#x4FEE;&#x6539;&#x7F51;&#x7AD9;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo常用命令"><span class="nav-number">3.</span> <span class="nav-text"><a href="#hexo&#x5E38;&#x7528;&#x547D;&#x4EE4;" class="headerlink" title="hexo&#x5E38;&#x7528;&#x547D;&#x4EE4;"></a>hexo&#x5E38;&#x7528;&#x547D;&#x4EE4;</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#绑定自己的域名"><span class="nav-number">4.</span> <span class="nav-text"><a href="#&#x7ED1;&#x5B9A;&#x81EA;&#x5DF1;&#x7684;&#x57DF;&#x540D;" class="headerlink" title="&#x7ED1;&#x5B9A;&#x81EA;&#x5DF1;&#x7684;&#x57DF;&#x540D;"></a>&#x7ED1;&#x5B9A;&#x81EA;&#x5DF1;&#x7684;&#x57DF;&#x540D;</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#这个首先你得有个域名不会的自己百度一下很简单，我是在腾讯云上买的域名，买完域名后进入域名服务-gt-域名管理"><span class="nav-number">4.1.</span> <span class="nav-text"><a href="#&#x8FD9;&#x4E2A;&#x9996;&#x5148;&#x4F60;&#x5F97;&#x6709;&#x4E2A;&#x57DF;&#x540D;&#x4E0D;&#x4F1A;&#x7684;&#x81EA;&#x5DF1;&#x767E;&#x5EA6;&#x4E00;&#x4E0B;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x6211;&#x662F;&#x5728;&#x817E;&#x8BAF;&#x4E91;&#x4E0A;&#x4E70;&#x7684;&#x57DF;&#x540D;&#xFF0C;&#x4E70;&#x5B8C;&#x57DF;&#x540D;&#x540E;&#x8FDB;&#x5165;&#x57DF;&#x540D;&#x670D;&#x52A1;-gt-&#x57DF;&#x540D;&#x7BA1;&#x7406;" class="headerlink" title="&#x8FD9;&#x4E2A;&#x9996;&#x5148;&#x4F60;&#x5F97;&#x6709;&#x4E2A;&#x57DF;&#x540D;&#x4E0D;&#x4F1A;&#x7684;&#x81EA;&#x5DF1;&#x767E;&#x5EA6;&#x4E00;&#x4E0B;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x6211;&#x662F;&#x5728;&#x817E;&#x8BAF;&#x4E91;&#x4E0A;&#x4E70;&#x7684;&#x57DF;&#x540D;&#xFF0C;&#x4E70;&#x5B8C;&#x57DF;&#x540D;&#x540E;&#x8FDB;&#x5165;&#x57DF;&#x540D;&#x670D;&#x52A1;-&gt;&#x57DF;&#x540D;&#x7BA1;&#x7406;"></a>&#x8FD9;&#x4E2A;&#x9996;&#x5148;&#x4F60;&#x5F97;&#x6709;&#x4E2A;&#x57DF;&#x540D;&#x4E0D;&#x4F1A;&#x7684;&#x81EA;&#x5DF1;&#x767E;&#x5EA6;&#x4E00;&#x4E0B;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x6211;&#x662F;&#x5728;&#x817E;&#x8BAF;&#x4E91;&#x4E0A;&#x4E70;&#x7684;&#x57DF;&#x540D;&#xFF0C;&#x4E70;&#x5B8C;&#x57DF;&#x540D;&#x540E;&#x8FDB;&#x5165;<strong>&#x57DF;&#x540D;&#x670D;&#x52A1;-&gt;&#x57DF;&#x540D;&#x7BA1;&#x7406;</strong></span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#然后我们再去github"><span class="nav-number">4.2.</span> <span class="nav-text"><a href="#&#x7136;&#x540E;&#x6211;&#x4EEC;&#x518D;&#x53BB;github" class="headerlink" title="&#x7136;&#x540E;&#x6211;&#x4EEC;&#x518D;&#x53BB;github"></a>&#x7136;&#x540E;&#x6211;&#x4EEC;&#x518D;&#x53BB;github</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span><a href="http://www.miitbeian.gov.cn">豫ICP备17036205号</a> </span>
+  <span class="author" itemprop="copyrightHolder">听孔子的话</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cyteYNP3V';
+      var conf = '783edd2cf1257e61fa2b5bf46ddb34d6';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+  
+
+
+
+  
+
+
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
